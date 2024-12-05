@@ -14,10 +14,10 @@ table_df |>
   select(file_path, center_lon, center_lat) |>
   mutate(
     osm        = str_glue(
-      "[OSM](https://www.openstreetmap.org/?mlat={center_lon}&mlon={center_lat})"
+      "[OSM](https://www.openstreetmap.org/?mlat={center_lat}&mlon={center_lon})"
     ),
     google_map = str_glue(
-      "[Google Map](https://www.google.com/maps?q={center_lon},{center_lat})"
+      "[Google Map](https://www.google.com/maps?q={center_lat},{center_lon})"
     )
   ) |>
   kable() |>
